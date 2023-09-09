@@ -64,8 +64,7 @@ class MainActivity : AppCompatActivity() {
             textView.text = info
 
         }
-
-
+        
     }
 
 }
