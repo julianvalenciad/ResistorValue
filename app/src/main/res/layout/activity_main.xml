@@ -36,10 +36,12 @@
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/calculator_valor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -52,25 +54,23 @@
                 android:id="@+id/color_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/color_1" />
 
             <TextView
                 android:id="@+id/color_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/color_2" />
 
             <TextView
                 android:id="@+id/color_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/color_3" />
 
-            <TextView
-                android:id="@+id/color_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/color_4" />
         </TableRow>
 
         <TableRow
@@ -78,28 +78,48 @@
             android:layout_height="match_parent">
 
             <Spinner
-                android:id="@+id/franja_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/Colores"/>
+                android:id="@+id/franja_uno"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:entries="@array/Colores" />
 
             <Spinner
                 android:id="@+id/franja_2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/Colores"/>
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:entries="@array/Colores" />
 
             <Spinner
                 android:id="@+id/franja_3"
                 android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:entries="@array/Colores" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Tolerancia"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/Colores"/>
+                android:text="@string/Tolerancia" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Spinner
-                android:id="@+id/tolerancia"
+                android:id="@+id/franja_tol"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/Tolerancias"/>
+                android:layout_height="50dp"
+                android:entries="@array/Tolerancias" />
         </TableRow>
 
     </TableLayout>

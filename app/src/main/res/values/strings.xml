@@ -3,8 +3,9 @@
     <string name="tittle">Resistor value</string>
     <string name="Result">Resultado</string>
     <string name="Calcular">Calcular valor</string>
-    <string name="color_1">Primer franja</string>
-    <string name="color_2">Segunda franja</string>
-    <string name="color_3">Tercera franja</string>
-    <string name="color_4">Cuarta franja</string>
+    <string name="color_1">Franja 1</string>
+    <string name="color_2">Franja 2</string>
+    <string name="color_3">Franja 3</string>
+    <string name="color_4">Tolerancia</string>
+    <string name="Tolerancia">Tolerancia</string>
 </resources>
