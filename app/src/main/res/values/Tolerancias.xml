@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Tolerancias">
+        <item> "Marrón" </item>
+        <item> "Rojo" </item>
+        <item> "Dorado" </item>
+        <item> "Plateado" </item>
+    </string-array>
+</resources>
