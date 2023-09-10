@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
             "Purpura" -> 7.0
             "Gris" -> 8.0
             "Blanco" -> 9.0
-
+            "Dorado" -> 0.1
+            "Plateado" -> 0.01
             else -> 0.0
         }
     }
@@ -56,12 +57,21 @@ class MainActivity : AppCompatActivity() {
             val texto_tres = color_tres.selectedItem.toString()
             val texto_tol = color_tol.selectedItem.toString()
 
+            if (texto_tres=="Dorado" || texto_tres=="Plateado"){
+                val resistencia = ((obtenerValorColor(texto_uno)*10 + obtenerValorColor(texto_dos))*obtenerValorColor(texto_tres)).toInt()
+                val tolerancia = obtenerValorTolerancia(texto_tol)
+                val info = "Su resistencia es de " + resistencia.toString()+"Ω"+ "\n" + "Con un valor de tolerancia de "+ tolerancia
 
-            val resistencia = (obtenerValorColor(texto_uno)*10 + obtenerValorColor(texto_dos)*Math.pow(10.0,obtenerValorColor(texto_tres))).toInt()
-            val tolerancia = obtenerValorTolerancia(texto_tol)
-            val info = "Su resistencia es de " + resistencia.toString()+"Ω"+ "\n" + "Con un valor de tolerancia de "+ tolerancia
+                textView.text = info
+            }else{
+                val resistencia = ((obtenerValorColor(texto_uno)*10 + obtenerValorColor(texto_dos))*Math.pow(10.0,obtenerValorColor(texto_tres))).toInt()
+                val tolerancia = obtenerValorTolerancia(texto_tol)
+                val info = "Su resistencia es de " + resistencia.toString()+"Ω"+ "\n" + "Con un valor de tolerancia de "+ tolerancia
 
-            textView.text = info
+                textView.text = info
+            }
+
+
 
         }
         
